@@ -73,7 +73,7 @@ export default function ContactPage() {
       <section className="relative isolate overflow-hidden bg-forest">
         <div className="absolute inset-0">
           <SmartImage
-            src="https://images.unsplash.com/photo-1498243691581-b145c3f54a5a?auto=format&fit=crop&w=2000&q=80"
+            src="/images/pexels-rdne-7947637.jpg"
             alt="Group of learners together outdoors"
             sizes="100vw"
             className="object-cover object-center"

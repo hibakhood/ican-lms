@@ -36,7 +36,7 @@ export default function AboutPage() {
       <section className="relative isolate overflow-hidden bg-forest">
         <div className="absolute inset-0">
           <SmartImage
-            src="https://images.unsplash.com/photo-1541339907198-e08756dedf3f?auto=format&fit=crop&w=2000&q=80"
+            src="/images/pexels-rdne-5915230.jpg"
             alt="University lecture hall"
             sizes="100vw"
             className="object-cover object-center"
@@ -59,7 +59,7 @@ export default function AboutPage() {
       <section className="mx-auto grid max-w-7xl items-center gap-10 px-4 py-16 sm:px-6 sm:py-24 lg:grid-cols-2 lg:gap-16">
         <div className="relative aspect-[4/3] overflow-hidden rounded-3xl">
           <SmartImage
-            src="https://images.unsplash.com/photo-1481627834876-b7833e8f5570?auto=format&fit=crop&w=1600&q=80"
+            src="/images/pexels-leeloothefirst-8358048.jpg"
             alt="Library shelves filled with books"
             sizes="(max-width: 1024px) 100vw, 50vw"
           />

@@ -58,7 +58,7 @@ export default async function CoursesPage({
       <section className="relative isolate overflow-hidden bg-forest">
         <div className="absolute inset-0">
           <SmartImage
-            src="https://images.unsplash.com/photo-1427504494785-3a9ca7044f45?auto=format&fit=crop&w=2000&q=80"
+            src="/images/pexels-polina-tankilevitch-4443178.jpg"
             alt="Student browsing between library shelves"
             sizes="100vw"
             className="object-cover object-center"
@@ -141,7 +141,7 @@ export default async function CoursesPage({
             <div className="grid items-stretch gap-6 overflow-hidden rounded-3xl border border-mint-soft bg-mint-soft/40 p-6 sm:grid-cols-2 sm:p-10">
               <div className="relative min-h-[220px] overflow-hidden rounded-2xl">
                 <SmartImage
-                  src="https://images.unsplash.com/photo-1456513080510-7bf3a84b82f8?auto=format&fit=crop&w=1200&q=80"
+                  src="/images/pexels-n-voitkevich-6863182.jpg"
                   alt="Open books and notes on a study desk"
                   sizes="(max-width: 640px) 100vw, 50vw"
                   className="aspect-[4/3] sm:aspect-auto sm:h-full"

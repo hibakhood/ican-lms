@@ -21,10 +21,10 @@ const platformLabels: Record<string, string> = {
 
 const platformImages: Record<string, string> = {
   youtube_live:
-    "https://images.unsplash.com/photo-1610484826967-09c5720778c7?auto=format&fit=crop&w=1200&q=80",
+    "/images/pexels-pavel-danilyuk-7654129.jpg",
   google_meet:
-    "https://images.unsplash.com/photo-1588702547923-7093a6c3ba33?auto=format&fit=crop&w=1200&q=80",
-  zoom: "https://images.unsplash.com/photo-1552664730-d307ca884978?auto=format&fit=crop&w=1200&q=80",
+    "/images/pexels-pavel-danilyuk-7654129.jpg",
+  zoom: "/images/pexels-pavel-danilyuk-7654129.jpg",
 }
 
 export function LiveClassCard({ liveClass }: LiveClassCardProps) {

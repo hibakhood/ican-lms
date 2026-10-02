@@ -19,7 +19,7 @@ export function AuthShell({ title, description, children }: AuthShellProps) {
     <div className="grid lg:min-h-[calc(100svh-72px)] lg:grid-cols-[1.1fr_1fr]">
       <div className="relative isolate hidden overflow-hidden bg-forest p-10 lg:flex lg:flex-col lg:justify-between xl:p-14">
         <SmartImage
-          src="https://images.unsplash.com/photo-1522202176988-66273c2fd55f?auto=format&fit=crop&w=1600&q=80"
+          src="/images/pexels-karola-g-7681091.jpg"
           alt="Students learning together with laptops"
           sizes="50vw"
           className="object-cover object-center"

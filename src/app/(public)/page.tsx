@@ -23,26 +23,23 @@ const learningFormats = [
   {
     icon: Radio,
     title: "Live Interactive Classes",
-    text: "Join scheduled sessions on YouTube Live, Google Meet, or Zoom. Ask questions in real time and learn directly from your tutor.",
-    image:
-      "https://images.unsplash.com/photo-1580894732444-8ecded7900cd?auto=format&fit=crop&w=1200&q=80",
-    alt: "Tutor teaching an online class on a video call",
+    text: "Join scheduled ICAN-focused sessions. Ask questions in real time and learn directly from qualified practitioners.",
+    image: "/images/pexels-pavel-danilyuk-7654129.jpg",
+    alt: "Live interactive class session between tutor and students",
   },
   {
     icon: MonitorPlay,
     title: "Recorded Video Lessons",
-    text: "Every live class is recorded and kept on the lesson, so you can revise any topic as often as you need, on any device.",
-    image:
-      "https://images.unsplash.com/photo-1571260899304-425eee4c7efc?auto=format&fit=crop&w=1200&q=80",
-    alt: "Student watching a recorded lesson with headphones",
+    text: "Every live class is recorded and organised per lesson, so you can revise any ICAN topic as often as you need.",
+    image: "/images/pexels-tima-miroshnichenko-6694964.jpg",
+    alt: "Student reviewing recorded study material on a laptop",
   },
   {
     icon: FileText,
     title: "Professional Study Materials",
-    text: "Lecture notes, practice questions, solutions, and presentations—organized per lesson and ready to download.",
-    image:
-      "https://images.unsplash.com/photo-1516321318423-f06f85e504b3?auto=format&fit=crop&w=1200&q=80",
-    alt: "Study notes and laptop on a desk",
+    text: "Lecture notes, practice questions, worked solutions and summaries—structured to match ICAN’s levels and ready when you are.",
+    image: "/images/pexels-polina-tankilevitch-4443181.jpg",
+    alt: "Organised study notes and materials on a desk",
   },
 ]
 
@@ -141,8 +138,8 @@ export default async function HomePage() {
               </p>
               <div className="relative mt-8 hidden aspect-[4/3] overflow-hidden rounded-3xl lg:block">
                 <SmartImage
-                  src="https://images.unsplash.com/photo-1434030216411-0b793f4b4173?auto=format&fit=crop&w=1200&q=80"
-                  alt="Student taking notes during a study session"
+                  src="/images/pexels-mizunokozuki-12912080.jpg"
+                  alt="Student taking structured notes during an ICAN study session"
                   sizes="(max-width: 1024px) 0vw, 40vw"
                 />
                 <div className="absolute inset-0 bg-gradient-to-t from-forest-dark/70 to-transparent" />
@@ -214,8 +211,8 @@ export default async function HomePage() {
           <div className="mt-10 grid items-stretch gap-6 overflow-hidden rounded-3xl border border-mint-soft bg-mint-soft/40 p-6 sm:grid-cols-2 sm:p-10">
             <div className="relative min-h-[220px] overflow-hidden rounded-2xl">
               <SmartImage
-                src="https://images.unsplash.com/photo-1427504494785-3a9ca7044f45?auto=format&fit=crop&w=1200&q=80"
-                alt="Notebook and course planning on a desk"
+                src="/images/pexels-n-voitkevich-6863182.jpg"
+                alt="Open books and organised study materials for exam preparation"
                 sizes="(max-width: 640px) 100vw, 50vw"
                 className="aspect-[4/3] sm:aspect-auto sm:h-full"
               />
@@ -345,8 +342,8 @@ export default async function HomePage() {
           ) : (
             <div className="relative aspect-[4/3] overflow-hidden rounded-3xl">
               <SmartImage
-                src="https://images.unsplash.com/photo-1524178232363-1fb2b075b655?auto=format&fit=crop&w=1200&q=80"
-                alt="Tutor guiding students in a classroom"
+                src="/images/pexels-pavel-danilyuk-7120911.jpg"
+                alt="Qualified tutor guiding a focused study session"
                 sizes="(max-width: 1024px) 100vw, 50vw"
               />
             </div>
@@ -358,8 +355,8 @@ export default async function HomePage() {
       <section className="relative isolate overflow-hidden">
         <div className="absolute inset-0">
           <SmartImage
-            src="https://images.unsplash.com/photo-1523240795612-9a054b0db644?auto=format&fit=crop&w=2000&q=80"
-            alt="Group of learners working together on laptops"
+            src="/images/pexels-rdne-7947637.jpg"
+            alt="Professional learning environment for focused exam preparation"
             sizes="100vw"
             className="object-cover object-center"
           />

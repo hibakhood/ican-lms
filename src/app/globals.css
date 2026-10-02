@@ -1,14 +1,14 @@
 @import "tailwindcss";
 
 @theme {
-  --font-display: var(--font-display), "Poppins", sans-serif;
+  --font-display: var(--font-display), "Plus Jakarta Sans", sans-serif;
   --font-body: var(--font-body), "Inter", sans-serif;
   --color-primary-dark: #0e5c33;
   --color-forest: #0e3b24;
   --color-forest-dark: #0a2c1b;
-  --color-mint: #93e9ac;
-  --color-mint-soft: #e9f6ee;
-  --color-orange: #e97724;
+  --color-mint: #c9f2d6;
+  --color-mint-soft: #f2faf4;
+  --color-orange: #f29a3e;
   --color-ink: #0f1b14;
 }
 
@@ -96,12 +96,19 @@
   h4,
   h5,
   h6 {
-    font-family: var(--font-display), "Poppins", sans-serif;
+    font-family: var(--font-display), "Plus Jakarta Sans", sans-serif;
+    letter-spacing: -0.01em;
   }
-}
-
-@layer utilities {
   .text-balance {
     text-wrap: balance;
   }
+  .progress-path {
+    background: radial-gradient(
+        120% 120% at 50% 0%,
+        rgba(201, 242, 214, 0.12) 0%,
+        rgba(15, 27, 20, 0) 70%
+      )
+      var(--background);
+  }
 }
+

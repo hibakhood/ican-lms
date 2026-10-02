@@ -15,8 +15,8 @@ export function Hero() {
     <section className="relative isolate overflow-hidden bg-forest">
       <div className="absolute inset-0">
         <SmartImage
-          src="https://images.unsplash.com/photo-1522202176988-66273c2fd55f?auto=format&fit=crop&w=2000&q=80"
-          alt="Students studying together with laptops"
+          src="/images/pexels-gabby-k-6281877.jpg"
+          alt="Focused student preparing for ICAN exam studies at a desk"
           className="object-cover object-center"
           sizes="100vw"
           preload
@@ -27,21 +27,21 @@ export function Hero() {
 
       <div className="relative mx-auto max-w-7xl px-4 pb-16 pt-20 sm:px-6 sm:pb-24 sm:pt-28 lg:pt-36">
         <div className="max-w-2xl">
-          <span className="inline-flex items-center gap-2 rounded-full border border-mint/30 bg-mint/10 px-4 py-1.5 text-xs font-semibold text-mint backdrop-blur-sm sm:text-sm">
+          <span className="inline-flex items-center gap-2 rounded-full border border-mint/40 bg-white/10 px-4 py-1.5 text-xs font-semibold text-mint backdrop-blur-sm sm:text-sm shadow-sm">
             <Radio className="h-3.5 w-3.5" aria-hidden="true" />
-            Live Online Classes
+            ICAN Exam Preparation
           </span>
 
           <h1 className="mt-6 font-display font-extrabold leading-[1.05] tracking-tight text-white [font-size:clamp(2.5rem,6vw,4.25rem)]">
-            Learn. Prepare.
+            A clear path to
             <br />
-            <span className="text-mint">Achieve.</span>
+            <span className="text-mint">ICAN success</span>
           </h1>
 
           <p className="mt-6 max-w-xl text-base leading-relaxed text-white/85 [font-size:clamp(1rem,1.5vw,1.125rem)] sm:leading-8">
-            Structured courses taught by expert tutors—live interactive classes,
-            recorded lessons, and professional study materials, all in one
-            place. Study from home, on any device, at your own pace.
+            Structured for ICAN’s levels, taught by qualified practitioners.
+            Live classes, recordings, and organised study materials—so every
+            hour of study moves you forward.
           </p>
 
           <div className="mt-9 flex flex-col gap-4 sm:flex-row">
@@ -60,7 +60,7 @@ export function Hero() {
               variant="outline"
               className="h-13 border-white/30 bg-white/5 px-8 text-base text-white backdrop-blur-sm hover:border-mint hover:bg-white/10 hover:text-mint"
             >
-              <Link href="/register">Get Started Free</Link>
+              <Link href="/tutors">Meet Our Tutors</Link>
             </Button>
           </div>
 

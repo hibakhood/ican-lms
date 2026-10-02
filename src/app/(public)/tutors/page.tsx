@@ -27,7 +27,7 @@ export default async function TutorsPage() {
       <section className="relative isolate overflow-hidden bg-forest">
         <div className="absolute inset-0">
           <SmartImage
-            src="https://images.unsplash.com/photo-1524178232363-1fb2b075b655?auto=format&fit=crop&w=2000&q=80"
+            src="/images/pexels-pavel-danilyuk-7654426.jpg"
             alt="Tutor leading a class"
             sizes="100vw"
             className="object-cover object-center"
