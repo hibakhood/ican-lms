@@ -3,7 +3,7 @@
 import { useState } from "react"
 import Link from "next/link"
 import { usePathname } from "next/navigation"
-import { Menu, X, Search, GraduationCap, ArrowRight } from "lucide-react"
+import { Menu, X, Search, GraduationCap, ArrowRight, UserRound } from "lucide-react"
 import { Button } from "@/components/ui/button"
 import { cn } from "@/lib/utils"
 
@@ -71,12 +71,13 @@ export function Navbar() {
               Get Started <ArrowRight className="h-4 w-4" />
             </Link>
           </Button>
-          <span
-            aria-hidden="true"
-            className="flex h-9 w-9 items-center justify-center rounded-full bg-forest text-sm font-semibold text-white"
+          <Link
+            href="/login"
+            aria-label="Account"
+            className="flex h-9 w-9 items-center justify-center rounded-full border border-mint-soft bg-mint-soft/60 text-forest transition-colors hover:border-primary hover:text-primary"
           >
-            IC
-          </span>
+            <UserRound className="h-4 w-4" aria-hidden="true" />
+          </Link>
         </div>
 
         <button

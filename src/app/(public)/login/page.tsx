@@ -9,7 +9,7 @@ import { createClient } from "@/lib/supabase/client"
 import { Button } from "@/components/ui/button"
 import { Input } from "@/components/ui/input"
 import { Label } from "@/components/ui/label"
-import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card"
+import { AuthShell } from "@/components/shared/auth-shell"
 import Link from "next/link"
 
 export default function LoginPage() {
@@ -66,66 +66,53 @@ export default function LoginPage() {
   }
 
   return (
-    <div className="container mx-auto flex min-h-[70vh] items-center justify-center px-4">
-      <div className="w-full max-w-md space-y-6">
-        <div className="space-y-2 text-center">
-          <h1 className="text-3xl font-bold">Login</h1>
-          <p className="text-muted-foreground">Sign in to access your account</p>
+    <AuthShell title="Welcome back" description="Sign in to access your account">
+      <form onSubmit={handleSubmit(onSubmit)} className="space-y-4">
+        {error && (
+          <div className="rounded-xl bg-destructive/10 p-3 text-sm text-destructive">
+            {error}
+          </div>
+        )}
+        <div className="space-y-2">
+          <Label htmlFor="email">Email</Label>
+          <Input
+            id="email"
+            type="email"
+            {...register("email")}
+            disabled={loading}
+          />
+          {errors.email && (
+            <p className="text-sm text-destructive">
+              {errors.email.message}
+            </p>
+          )}
         </div>
-        <Card>
-          <CardHeader>
-            <CardTitle>Welcome back</CardTitle>
-          </CardHeader>
-          <CardContent>
-            <form onSubmit={handleSubmit(onSubmit)} className="space-y-4">
-              {error && (
-                <div className="rounded-md bg-destructive/10 p-3 text-sm text-destructive">
-                  {error}
-                </div>
-              )}
-              <div className="space-y-2">
-                <Label htmlFor="email">Email</Label>
-                <Input
-                  id="email"
-                  type="email"
-                  {...register("email")}
-                  disabled={loading}
-                />
-                {errors.email && (
-                  <p className="text-sm text-destructive">
-                    {errors.email.message}
-                  </p>
-                )}
-              </div>
-              <div className="space-y-2">
-                <Label htmlFor="password">Password</Label>
-                <Input
-                  id="password"
-                  type="password"
-                  {...register("password")}
-                  disabled={loading}
-                />
-                {errors.password && (
-                  <p className="text-sm text-destructive">
-                    {errors.password.message}
-                  </p>
-                )}
-              </div>
-              <Button type="submit" className="w-full" disabled={loading}>
-                {loading ? "Signing in..." : "Sign In"}
-              </Button>
-              <div className="text-center text-sm">
-                <Link
-                  href="/register"
-                  className="text-primary hover:underline"
-                >
-                  Don&apos;t have an account? Register
-                </Link>
-              </div>
-            </form>
-          </CardContent>
-        </Card>
-      </div>
-    </div>
+        <div className="space-y-2">
+          <Label htmlFor="password">Password</Label>
+          <Input
+            id="password"
+            type="password"
+            {...register("password")}
+            disabled={loading}
+          />
+          {errors.password && (
+            <p className="text-sm text-destructive">
+              {errors.password.message}
+            </p>
+          )}
+        </div>
+        <Button type="submit" className="w-full" disabled={loading}>
+          {loading ? "Signing in..." : "Sign In"}
+        </Button>
+        <div className="text-center text-sm">
+          <Link
+            href="/register"
+            className="text-primary hover:underline"
+          >
+            Don&apos;t have an account? Register
+          </Link>
+        </div>
+      </form>
+    </AuthShell>
   )
 }
