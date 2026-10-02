@@ -15,7 +15,7 @@ type Level = 'beginner' | 'intermediate' | 'advanced'
 export default function NewCoursePage() {
   const router = useRouter()
   const [loading, setLoading] = useState(false)
-  const [categories, setCategories] = useState<any[]>([])
+  const [categories, setCategories] = useState<{ id: string; name: string }[]>([])
   const [form, setForm] = useState({
     title: '',
     slug: '',

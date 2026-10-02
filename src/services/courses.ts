@@ -60,3 +60,17 @@ export async function getCourseBySlug(slug: string) {
   }
   return { data, error: null }
 }
+
+export async function getCategoriesForFilter() {
+  const supabase = await createClient()
+  const { data, error } = await supabase
+    .from('course_categories')
+    .select('id, name')
+    .eq('is_active', true)
+    .order('name')
+
+  if (error) {
+    return { data: null, error }
+  }
+  return { data, error: null }
+}

@@ -60,7 +60,7 @@ export default function ContactPage() {
                   Message sent successfully
                 </h3>
                 <p className="mt-2 text-sm text-muted-foreground">
-                  Thank you for contacting us. We'll get back to you soon.
+                  Thank you for contacting us. We&apos;ll get back to you soon.
                 </p>
                 <Button
                   className="mt-4"

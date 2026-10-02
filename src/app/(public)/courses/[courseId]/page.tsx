@@ -77,8 +77,8 @@ export default async function CourseDetailPage({
                 </CardHeader>
                 <CardContent className="space-y-4">
                   {modules
-                    .sort((a: any, b: any) => a.order - b.order)
-                    .map((module: any) => (
+                    .sort((a: { order: number }, b: { order: number }) => a.order - b.order)
+                    .map((module: { id: string; order: number; title: string; lessons?: { id: string; order: number; title: string }[] }) => (
                       <div key={module.id} className="space-y-2">
                         <h3 className="font-semibold">
                           Module {module.order}: {module.title}
@@ -86,8 +86,8 @@ export default async function CourseDetailPage({
                         {module.lessons && module.lessons.length > 0 && (
                           <ul className="ml-4 space-y-1 text-sm text-muted-foreground">
                             {module.lessons
-                              .sort((a: any, b: any) => a.order - b.order)
-                              .map((lesson: any) => (
+                              .sort((a: { order: number }, b: { order: number }) => a.order - b.order)
+                              .map((lesson: { id: string; title: string }) => (
                                 <li key={lesson.id} className="flex items-center gap-2">
                                   <BookOpen className="h-3 w-3" />
                                   {lesson.title}

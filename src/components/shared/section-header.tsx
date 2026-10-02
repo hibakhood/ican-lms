@@ -7,9 +7,13 @@ interface SectionHeaderProps {
 export function SectionHeader({ title, description, className }: SectionHeaderProps) {
   return (
     <div className={className}>
-      <h2 className="text-2xl font-bold tracking-tight sm:text-3xl">{title}</h2>
+      <h2 className="font-display text-2xl font-bold tracking-tight text-forest sm:text-4xl">
+        {title}
+      </h2>
       {description && (
-        <p className="mt-2 text-lg text-muted-foreground">{description}</p>
+        <p className="mt-2 text-sm text-muted-foreground sm:text-base">
+          {description}
+        </p>
       )}
     </div>
   )

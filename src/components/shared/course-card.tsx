@@ -1,7 +1,6 @@
 import Link from "next/link"
-import { Card, CardContent, CardFooter, CardHeader, CardTitle } from "@/components/ui/card"
+import { ArrowRight, BookOpen, Clock, Users } from "lucide-react"
 import { Badge } from "@/components/ui/badge"
-import { BookOpen, Clock } from "lucide-react"
 
 interface CourseCardProps {
   course: {
@@ -21,8 +20,8 @@ interface CourseCardProps {
 
 export function CourseCard({ course, tutorName, categoryName }: CourseCardProps) {
   return (
-    <Card className="flex h-full flex-col overflow-hidden transition-all hover:shadow-md">
-      <div className="aspect-video w-full bg-muted">
+    <article className="group flex h-full flex-col overflow-hidden rounded-2xl border border-mint-soft bg-white shadow-sm transition-all hover:-translate-y-1 hover:shadow-md">
+      <div className="relative aspect-video w-full bg-gradient-to-br from-forest to-primary-dark">
         {course.thumbnail_url ? (
           <img
             src={course.thumbnail_url}
@@ -30,54 +29,57 @@ export function CourseCard({ course, tutorName, categoryName }: CourseCardProps)
             className="h-full w-full object-cover"
           />
         ) : (
-          <div className="flex h-full items-center justify-center text-muted-foreground">
-            <BookOpen className="h-10 w-10" />
+          <div className="flex h-full items-center justify-center">
+            <BookOpen className="h-10 w-10 text-mint/70" />
           </div>
         )}
+        <span className="absolute left-3 top-3 rounded-full bg-primary px-3 py-1 text-xs font-semibold text-white shadow-sm">
+          {course.is_free ? "Free" : "Course"}
+        </span>
       </div>
-      <CardHeader>
-        <div className="flex items-start justify-between gap-2">
-          <CardTitle className="line-clamp-2 text-lg">{course.title}</CardTitle>
+
+      <div className="flex flex-1 flex-col p-5">
+        <div className="flex flex-wrap items-center gap-2 text-xs font-medium text-muted-foreground">
+          {course.category_id && categoryName && (
+            <span className="rounded-full bg-mint-soft px-2.5 py-1 text-forest">
+              {categoryName}
+            </span>
+          )}
+          {course.level && (
+            <span className="capitalize text-primary">{course.level}</span>
+          )}
         </div>
-        {course.category_id && categoryName && (
-          <Badge variant="secondary" className="w-fit">
-            {categoryName}
-          </Badge>
-        )}
-        {course.level && (
-          <Badge variant="outline" className="w-fit">
-            {course.level}
-          </Badge>
-        )}
-      </CardHeader>
-      <CardContent className="flex-1">
+
+        <h3 className="mt-3 font-display text-lg font-bold leading-snug text-forest">
+          {course.title}
+        </h3>
+
         {course.description && (
-          <p className="line-clamp-2 text-sm text-muted-foreground">
+          <p className="mt-2 line-clamp-2 text-sm text-muted-foreground">
             {course.description}
           </p>
         )}
-      </CardContent>
-      <CardFooter className="flex flex-col items-start gap-3">
-        {tutorName && (
-          <p className="text-sm text-muted-foreground">By {tutorName}</p>
-        )}
-        <div className="flex w-full items-center justify-between">
-          <div className="flex items-center gap-2 text-xs text-muted-foreground">
-            {course.duration_hours && (
-              <span className="flex items-center gap-1">
-                <Clock className="h-3 w-3" />
-                {course.duration_hours}h
-              </span>
-            )}
+
+        <div className="mt-auto pt-4">
+          {tutorName && (
+            <p className="mb-3 text-xs font-medium text-muted-foreground">
+              Teacher: <span className="text-forest">{tutorName}</span>
+            </p>
+          )}
+          <div className="flex items-center justify-between border-t border-mint-soft pt-3">
+            <span className="flex items-center gap-1.5 text-xs text-muted-foreground">
+              <Users className="h-3.5 w-3.5" />
+              {course.duration_hours ? `${course.duration_hours}h` : "Self-paced"}
+            </span>
+            <Link
+              href={`/courses/${course.slug || course.id}`}
+              className="inline-flex items-center gap-1.5 rounded-full bg-primary px-4 py-1.5 text-xs font-semibold text-white transition-colors hover:bg-primary-dark"
+            >
+              View Course <ArrowRight className="h-3.5 w-3.5" />
+            </Link>
           </div>
-          <Link
-            href={`/courses/${course.slug || course.id}`}
-            className="inline-flex h-8 items-center justify-center rounded-md bg-primary px-3 text-xs font-medium text-primary-foreground shadow transition-colors hover:bg-primary/90"
-          >
-            View Course
-          </Link>
         </div>
-      </CardFooter>
-    </Card>
+      </div>
+    </article>
   )
 }
