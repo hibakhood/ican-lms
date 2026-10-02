@@ -3,12 +3,12 @@
 @theme {
   --font-display: var(--font-display), "Plus Jakarta Sans", sans-serif;
   --font-body: var(--font-body), "Inter", sans-serif;
-  --color-primary-dark: #0e5c33;
-  --color-forest: #0e3b24;
-  --color-forest-dark: #0a2c1b;
-  --color-mint: #c9f2d6;
-  --color-mint-soft: #f2faf4;
-  --color-orange: #f29a3e;
+  --color-primary-dark: #3d8510;
+  --color-forest: #276f27;
+  --color-forest-dark: #1b501b;
+  --color-mint: #bbdc12;
+  --color-mint-soft: #f2f8e3;
+  --color-leaf: #8eca3c;
   --color-ink: #0f1b14;
 }
 
@@ -37,47 +37,47 @@
 @layer base {
   :root {
     --background: 0 0% 100%;
-    --foreground: 152 40% 8%;
+    --foreground: 120 40% 8%;
     --card: 0 0% 100%;
-    --card-foreground: 152 40% 8%;
+    --card-foreground: 120 40% 8%;
     --popover: 0 0% 100%;
-    --popover-foreground: 152 40% 8%;
-    --primary: 147 73% 31%;
+    --popover-foreground: 120 40% 8%;
+    --primary: 96 78% 34%;
     --primary-foreground: 0 0% 100%;
-    --secondary: 145 50% 95%;
-    --secondary-foreground: 152 40% 12%;
-    --muted: 145 40% 96%;
-    --muted-foreground: 152 10% 42%;
-    --accent: 145 62% 90%;
-    --accent-foreground: 152 40% 12%;
+    --secondary: 78 70% 94%;
+    --secondary-foreground: 120 40% 12%;
+    --muted: 80 40% 96%;
+    --muted-foreground: 95 8% 42%;
+    --accent: 70 75% 90%;
+    --accent-foreground: 120 40% 12%;
     --destructive: 0 84% 60%;
     --destructive-foreground: 210 40% 98%;
-    --border: 145 30% 90%;
-    --input: 145 30% 90%;
-    --ring: 147 73% 31%;
+    --border: 80 30% 90%;
+    --input: 80 30% 90%;
+    --ring: 96 78% 34%;
     --radius: 1rem;
   }
 
   .dark {
-    --background: 152 40% 7%;
-    --foreground: 145 30% 96%;
-    --card: 152 35% 10%;
-    --card-foreground: 145 30% 96%;
-    --popover: 152 35% 10%;
-    --popover-foreground: 145 30% 96%;
-    --primary: 143 65% 48%;
-    --primary-foreground: 152 40% 8%;
-    --secondary: 152 25% 18%;
-    --secondary-foreground: 145 30% 96%;
-    --muted: 152 25% 18%;
-    --muted-foreground: 145 12% 65%;
-    --accent: 152 25% 18%;
-    --accent-foreground: 145 30% 96%;
+    --background: 120 40% 7%;
+    --foreground: 85 30% 96%;
+    --card: 120 35% 10%;
+    --card-foreground: 85 30% 96%;
+    --popover: 120 35% 10%;
+    --popover-foreground: 85 30% 96%;
+    --primary: 70 75% 47%;
+    --primary-foreground: 120 40% 8%;
+    --secondary: 120 25% 18%;
+    --secondary-foreground: 85 30% 96%;
+    --muted: 120 25% 18%;
+    --muted-foreground: 90 12% 65%;
+    --accent: 120 25% 18%;
+    --accent-foreground: 85 30% 96%;
     --destructive: 0 62% 45%;
     --destructive-foreground: 210 40% 98%;
-    --border: 152 25% 20%;
-    --input: 152 25% 20%;
-    --ring: 143 65% 48%;
+    --border: 120 25% 20%;
+    --input: 120 25% 20%;
+    --ring: 70 75% 47%;
   }
 }
 
@@ -105,8 +105,8 @@
   .progress-path {
     background: radial-gradient(
         120% 120% at 50% 0%,
-        rgba(201, 242, 214, 0.12) 0%,
-        rgba(15, 27, 20, 0) 70%
+        rgba(187, 220, 18, 0.1) 0%,
+        rgba(39, 111, 39, 0) 70%
       )
       var(--background);
   }
