@@ -22,7 +22,6 @@ const formats = [
 
 // Drop a looping ambient clip at public/videos/hero.mp4 to enable video.
 // Until then the poster image below is used (a failed video load falls back to it).
-const VIDEO_SRC = "/videos/hero.mp4"
 const POSTER_SRC = "/images/pexels-gabby-k-6281877.jpg"
 const POSTER_ALT = "Focused student preparing for ICAN exam studies at a desk"
 
@@ -43,7 +42,6 @@ const fadeShown = { opacity: 1, y: 0 }
 
 export function Hero() {
   const sectionRef = useRef<HTMLElement>(null)
-  const [videoFailed, setVideoFailed] = useState(false)
   const reduceMotion = useReducedMotion()
 
   // Normalised cursor position over the hero: -0.5 … 0.5 on each axis.
@@ -93,32 +91,13 @@ export function Hero() {
         style={reduceMotion ? undefined : { x: bgX, y: bgY }}
         className="absolute -inset-10"
       >
-        {videoFailed ? (
-          <SmartImage
-            src={POSTER_SRC}
-            alt=""
-            className="object-cover object-center"
-            sizes="100vw"
-            preload
-          />
-        ) : (
-          <video
-            className="absolute inset-0 h-full w-full object-cover object-center"
-            poster={POSTER_SRC}
-            autoPlay
-            muted
-            loop
-            playsInline
-            preload="auto"
-            onError={() => setVideoFailed(true)}
-          >
-            <source
-              src={VIDEO_SRC}
-              type="video/mp4"
-              onError={() => setVideoFailed(true)}
-            />
-          </video>
-        )}
+        <SmartImage
+          src={POSTER_SRC}
+          alt=""
+          className="object-cover object-center"
+          sizes="100vw"
+          preload
+        />
       </motion.div>
 
       <motion.div
