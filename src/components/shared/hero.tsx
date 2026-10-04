@@ -119,8 +119,6 @@ export function Hero() {
             />
           </video>
         )}
-        <div className="absolute inset-0 bg-gradient-to-r from-forest-dark via-forest-dark/90 to-forest-dark/40" />
-        <div className="absolute inset-0 bg-gradient-to-t from-forest-dark/80 via-transparent to-transparent" />
       </motion.div>
 
       <motion.div
