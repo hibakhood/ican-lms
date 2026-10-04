@@ -52,11 +52,11 @@ export function Hero() {
   const sx = useSpring(nx, { stiffness: 60, damping: 20, mass: 0.6 })
   const sy = useSpring(ny, { stiffness: 60, damping: 20, mass: 0.6 })
 
-  // Background travels WITH the mouse; foreground travels against it.
-  const bgX = useTransform(sx, (v) => v * BG_TRAVEL_X)
-  const bgY = useTransform(sy, (v) => v * BG_TRAVEL_Y)
-  const fgX = useTransform(sx, (v) => v * -FG_TRAVEL_X)
-  const fgY = useTransform(sy, (v) => v * -FG_TRAVEL_Y)
+  // Video moves in the direction of the mouse movement (and vice versa).
+  const bgX = useTransform(sx, (v) => v * -BG_TRAVEL_X)
+  const bgY = useTransform(sy, (v) => v * -BG_TRAVEL_Y)
+  const fgX = useTransform(sx, (v) => v * FG_TRAVEL_X)
+  const fgY = useTransform(sy, (v) => v * FG_TRAVEL_Y)
 
   function handleMouseMove(e: ReactMouseEvent<HTMLElement>) {
     if (reduceMotion || !sectionRef.current) return
