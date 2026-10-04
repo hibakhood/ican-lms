@@ -123,12 +123,12 @@ export function Hero() {
 
       <motion.div
         style={reduceMotion ? undefined : { x: fgX, y: fgY }}
-        className="relative mx-auto max-w-7xl px-4 pb-16 pt-20 sm:px-6 sm:pb-24 sm:pt-28 lg:pt-36"
+        className="relative mx-auto max-w-5xl px-4 pb-16 pt-20 text-center sm:px-6 sm:pb-24 sm:pt-28 lg:pt-36"
       >
-        <div className="max-w-2xl">
+        <div className="mx-auto max-w-3xl">
           <motion.span
             {...entrance(0)}
-            className="inline-flex items-center gap-2 rounded-full border border-mint/40 bg-white/10 px-4 py-1.5 text-xs font-semibold text-mint backdrop-blur-sm sm:text-sm shadow-sm"
+            className="inline-flex items-center gap-2 rounded-full border border-white/20 bg-white/10 px-4 py-1.5 text-xs font-semibold text-white/95 backdrop-blur-sm shadow-sm sm:text-sm"
           >
             <Radio className="h-3.5 w-3.5" aria-hidden="true" />
             ICAN Exam Preparation
@@ -136,16 +136,16 @@ export function Hero() {
 
           <motion.h1
             {...entrance(0.08)}
-            className="mt-6 font-display font-extrabold leading-[1.05] tracking-tight text-white [font-size:clamp(2.5rem,6vw,4.25rem)]"
+            className="mt-6 font-display font-extrabold leading-[1.05] tracking-tight text-white [font-size:clamp(2.75rem,7vw,4.5rem)]"
           >
             A clear path to
             <br />
-            <span className="text-mint">ICAN success</span>
+            <span className="bg-gradient-to-r from-white via-white to-mint/90 bg-clip-text text-transparent">ICAN success</span>
           </motion.h1>
 
           <motion.p
             {...entrance(0.16)}
-            className="mt-6 max-w-xl text-base leading-relaxed text-white/85 [font-size:clamp(1rem,1.5vw,1.125rem)] sm:leading-8"
+            className="mt-6 mx-auto max-w-2xl text-base leading-relaxed text-white/85 [font-size:clamp(1rem,1.5vw,1.125rem)]"
           >
             Structured for ICAN’s levels, taught by qualified practitioners.
             Live classes, recordings, and organised study materials—so every
@@ -154,7 +154,7 @@ export function Hero() {
 
           <motion.div
             {...entrance(0.24)}
-            className="mt-9 flex flex-col gap-4 sm:flex-row"
+            className="mt-9 flex flex-col justify-center gap-4 sm:flex-row"
           >
             <Button
               asChild
@@ -169,7 +169,7 @@ export function Hero() {
               asChild
               size="lg"
               variant="outline"
-              className="h-13 border-white/30 bg-white/5 px-8 text-base text-white backdrop-blur-sm hover:border-mint hover:bg-white/10 hover:text-mint"
+              className="h-13 border-white/30 bg-white/5 px-8 text-base text-white backdrop-blur-sm hover:border-white hover:bg-white/10"
             >
               <Link href="/tutors">Meet Our Tutors</Link>
             </Button>
@@ -177,13 +177,13 @@ export function Hero() {
 
           <motion.ul
             {...entrance(0.32)}
-            className="mt-12 grid grid-cols-1 gap-4 sm:grid-cols-2"
+            className="mt-12 mx-auto grid max-w-2xl grid-cols-1 gap-4 sm:grid-cols-2"
           >
             {formats.map((f) => (
               <li key={f.label} className="flex items-center gap-3 text-sm text-white/80">
                 <span
                   aria-hidden="true"
-                  className="flex h-8 w-8 shrink-0 items-center justify-center rounded-full bg-mint/15 text-mint ring-1 ring-mint/25"
+                  className="flex h-8 w-8 shrink-0 items-center justify-center rounded-full bg-white/10 text-white ring-1 ring-white/20"
                 >
                   <f.icon className="h-4 w-4" />
                 </span>
